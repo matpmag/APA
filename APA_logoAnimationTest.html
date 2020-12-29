@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            window.addEventListener('scroll', () => {
+                document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+            }, false);
+        </script>
+        <style>
+            body {
+                background-color: black;
+            }
+            .AnimationCircle {
+                animation: shrinkCircle 1s linear infinite;
+                animation-play-state: paused;
+                animation-delay: calc(var(--scroll) * -1s);
+            }
+
+            .logo {
+                opacity: 100;
+                animation: logoFade 1s linear infinite;
+                animation-play-state: paused;
+                animation-delay: calc(var(--scroll) * -1s);
+            }
+
+            @keyframes shrinkCircle {
+                0% {
+                    r:1080;
+                    opacity: 100%;
+                }
+                45% {
+                    r:315;
+                    opacity: 100%;
+                }
+                47%{
+                    opacity: 0%;
+                }
+                53%{
+                    opacity: 0%;
+                }
+                55% {
+                    r:315;
+                    opacity: 100%;
+                }
+                100% {
+                    r:1080;
+                    opacity: 100%;
+                }
+            }
+            @keyframes logoFade {
+                0% {
+                    opacity: 0%;
+                }
+                45% {
+                    opacity: 0%;
+                }
+                47% {
+                    opacity: 100%;
+                }
+                53% {
+                    opacity: 100%;
+                }
+                55% {
+                    opacity: 0%;
+                }
+                100% {
+                    opacity: 0%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <svg viewBox="0 0 1080 1080"></svg>
+        <div style="width: 80%; margin: auto;">
+        <?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="APALogo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1080 1080" style="enable-background:new 0 0 1080 1080;" xml:space="preserve">
+<style type="text/css">
+	
+	.Positive{fill:#FFFFFF;}
+	.Negative{fill:  #000000;}
+    .circles{mask:url(#circleMask);}
+	.banner{mask:url(#bannerMask);}
+	.bannerText{font-family:'Jost-Regular'; font-size:36px;}
+</style>
+<g class="logo">
+<g id="Backdrop">
+	<rect width="1080" height="1080"/>
+</g>
+	<mask id="circleMask">
+            <rect fill="white" width="1080" height="1080"/>
+			<polygon fill="black" x="225" y="233.6" width="630" height="630" points="143.6,360.1 287.8,359.9 143.6,693.1"/>
+			<polygon fill="black" x="225" y="233.6" width="630" height="630" points="792.1,359.8 936,693 936,360"/>
+	</mask>
+	<g id="Circle" class="circles">
+		<circle id="OuterCircle" class="OuterCircle Positive" cx="540" cy="548.6" r="315"/>
+		<circle id="InnerCircle" class="InnerCircle Negative" cx="540" cy="550" r="307.5"/>
+	</g>
+<g>
+	<g id="BannerContainer">
+		<mask  id="bannerMask">
+            <rect fill="black" width="1080" height="1080"/>
+			<circle fill="white" x="265" y="717.7" width="550" height="54.6" cx="540" cy="550" r="307.5"/>
+		</mask>
+		<rect id="Banner" class="banner Positive" x="265" y="717.7" width="550" height="54.6"/>
+		<text id="BannerText" class="bannerText Negative" transform="matrix(1 0 0 1 356.8164 757.5)" >Elim Pentecostal Church</text>
+	</g>
+</g>
+<g id="TitleContainer">
+		<path class="letter Positive" d="M647.9,693l144.1-333.2L935.9,693h-54l-90-224.6l-90,224.6 M737.9,576h108l18,45h-144L737.9,576z"/>
+		<path class="letter Positive" d="M521.9,360.2V693h-54V360.2H521.9z M575.9,360c0,0-36,0.2-54,0.2V405c18,0,45,0,45,0c36,0,54,9,54,45s-18,45-54,45c-18,0-27,0-45,0c0,13.9,0,31.1,0,45c18,0,54,0,54,0c63,0,90-36,90-90S647.9,360,575.9,360z"/>
+		<path class="letter Positive" d="M143.8,693l144.1-333.2L431.8,693h-54l-90-224.6l-90,224.6H143.8z M233.8,576h108l18,45h-144L233.8,576z"/>
+</g>
+</g>
+<circle id="AnimationCircle" class="AnimationCircle Positive" cx="540" cy="548.6" r="315"/>
+</svg>
+
+        </div>
+        <svg viewBox="0 0 1080 1080"></svg>
+    </body>
+</html>
